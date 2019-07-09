@@ -2,16 +2,13 @@ var currentTime = moment()
 console.log("Before ready-CURRENT DATE: " + moment(currentTime).format("MMMM do YYYY, h:mm:ss A"))
 $(document).ready(function () {
 console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
-    //GLOBAL VARIABLES
-    //------------------------
+
     var trainName = "";
     var trainDestination = "";
     var timeInput = "";
     var trainFrequency = "";
 
 
-    //FIREBASE DATABASE
-    //------------------------
     // Initialize Firebase
     var firebaseConfig = {
         apiKey: "AIzaSyDPQEpO12pkTZHJN0p7Rz8hCiOQ9GPmfII",
