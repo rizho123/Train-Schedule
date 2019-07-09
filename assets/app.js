@@ -1,6 +1,7 @@
-console.log("Before ready-CURRENT DATE: " + moment().format("MMMM do YYYY, HH:MM:SS A"))
+var currentTime = moment()
+console.log("Before ready-CURRENT DATE: " + moment(currentTime).format("MMMM do YYYY, h:mm:ss A"))
 $(document).ready(function () {
-console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, HH:MM:SS A"))
+console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
     //GLOBAL VARIABLES
     //------------------------
     var trainName = "";
@@ -52,7 +53,7 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, HH:MM:SS A")
         timeInput = $("#timeInput").val().trim();
         trainFrequency = $("#frequencyInput").val().trim();
         console.log("trainName: " + trainName, "trainDest: " + trainDestination, "timeInput: " + timeInput, "trainFreq: " + trainFrequency)
-        console.log("CURRENT DATE: " + moment().format("MMMM do YYYY, HH:MM:SS A"))
+        console.log("CURRENT DATE: " + moment().format("MMMM do YYYY, hh:mm:ss A"))
 
         // if (trainName == "") {
         //     alert('Enter a train name.');
@@ -71,10 +72,10 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, HH:MM:SS A")
         //     return false;
         // }
 
-        var timeConverted = moment(timeInput, "HH:MM").subtract("1,years");
+        var timeConverted = moment(timeInput, "hh:mm").subtract("1,years");
         console.log(timeConverted)
         var currentTime = moment();
-        console.log("Military time(now):  " + currentTime.format("HH:MM"));
+        console.log("Military time(now):  " + currentTime.format("hh:mm"));
 
         var diffTime = currentTime.diff(moment(timeConverted), "minutes");
         console.log("Time now " + currentTime)
@@ -86,7 +87,7 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, HH:MM:SS A")
         var minutesLeft = trainFrequency - trainRemainder;
         console.log("Minutes away: " + minutesLeft)
 
-        var nextTrain = moment().add(minutesLeft, "minutes").format("HH:MM a");
+        var nextTrain = moment().add(minutesLeft, "minutes").format("hh:mm a");
         console.log("nextTrain: " + nextTrain)
 
 

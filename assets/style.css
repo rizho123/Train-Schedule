@@ -1,0 +1,14 @@
+body {
+    background: url("./images/gravel.png")
+}
+
+.header {
+    text-align: center;
+}
+
+.schedule, .form-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px 40px;
+}
+
