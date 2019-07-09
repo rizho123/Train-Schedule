@@ -3,15 +3,17 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>GIFTastic!</title>
+        <title>Train Schedule</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./assets/reset.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha384-mlceH9HlqLp7GMKHrj5Ara1+LvdTZVMx4S1U43/NxCvAkzIo8WJ0FE7duLel3wVo" crossorigin="anonymous"></script>
         <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Monoton|Staatliches|Molengo|Baloo|Righteous&display=swap" rel="stylesheet">
-        <link rel="icon" href="./assets/images/favicon.ico"> <!--Favicon needed-->
+        <link rel="icon" href=""> <!--Favicon needed-->
     </head>
     <body>
         <div class="container">
@@ -34,14 +36,6 @@
                     </tr>
                 </thead>
                 <tbody id="trainInfo">
-                    <tr>
-                    <td>Some Train</td>
-                    <td>Somewhere</td>
-                    <td>20</td>
-                    <td>11:00 PM</td>
-                    <td>10</td>
-                    </tr>
-                      <!-- Insert additional movie rows here -->
                 </tbody>
             </table>
             </div>
@@ -68,7 +62,7 @@
                     <input type="number" class="validate" id="frequencyInput">
 
                 </div>
-                <button type="submit" class="submitBtn" id="addTrain">Submit</button>
+                <input id="addTrain" type="submit" value="Submit">
 
             </form>
         </div>
