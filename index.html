@@ -6,14 +6,60 @@
         <title>GIFTastic!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="./assets/reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Monoton|Staatliches|Molengo|Baloo|Righteous&display=swap" rel="stylesheet">
         <link rel="icon" href="./assets/images/favicon.ico"> <!--Favicon needed-->
     </head>
     <body>
-        
-        
+        <div class="container">
+            <div class="header">
+                <h1 class="title">Train Schedule</h1>
+                <p>Text Description</p>
+            </div>
+            <div class="schedule" id="schedule">
+                <p class="scheduletitle">Current Train Schedule</p>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <!-- The scope attribute specifies that this is a header for a column -->
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Some Train</td>
+                    <td>Somewhere</td>
+                    <td>20</td>
+                    <td>11:00 PM</td>
+                    <td>10</td>
+                    </tr>
+                      <!-- Insert additional movie rows here -->
+                </tbody>
+            </table>
+            </div>
+            <div class="form" style="border: 1px solid black">
+            <form class="addtrain">
+            <label for="addtrain" style="border: 1px solid red; background-color: grey; width: 100%;">Add Train</label>
+            <p>Train Name</p>
+            <input type="text" id="trainName">
+            <p>Destination</p>
+            <input type="text" id="destination">
+            <p>First Train Time (HH:mm - military time)</p>
+            <input type="text" id="firstTrain">
+            <p>Frequency</p>
+            <input type="text" id="frequency">
+                
+            </form>
+            </div>
+        </div>
         <script type="text/javascript" src="./assets/app.js"></script>
     </body>
 </html>
