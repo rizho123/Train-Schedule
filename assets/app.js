@@ -1,3 +1,8 @@
+$(document).ready(function(){
+
+    
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyBMOUz9b6svst9I2x1pr1hft1KH2el7YpM",
     authDomain: "project1-8ad64.firebaseapp.com",
@@ -11,3 +16,6 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
+
+
+})
