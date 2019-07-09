@@ -2,6 +2,14 @@ body {
     background: url("./images/gravel.png")
 }
 
+input {
+    border: none;
+}
+
+button:focus, input:focus {
+    outline: none;
+}
+
 .header {
     text-align: center;
 }
@@ -13,3 +21,8 @@ body {
     border: 1px solid #0000006c;
 }
 
+.validate {
+    border-radius: 10px;
+    border: 1px solid #0000006c;
+    padding-left: 8px;
+}
