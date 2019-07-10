@@ -24,50 +24,22 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
 
       var database = firebase.database();
 
+      function timeClock () {
+        $(".currentTime").html(moment().format("H:mm:ss a"));
+    }
+
+    setInterval(timeClock, 1000);
+
 
     database.ref().on("child_added", function (snapshot) {
         trainName = snapshot.val().trainName;
         trainDestination = snapshot.val().trainDestination;
         timeInput = snapshot.val().timeInput;
         trainFrequency = snapshot.val().trainFrequency;
-        var minutesAway = snapshot.val().minutesAway;
-        var nextArrival = snapshot.val().nextArrival;
-
-        $("#trainInfo").append(
-            "<tr><td>" + trainName + "</td>" +
-            "<td>" + trainDestination + "</td>" +
-            "<td>" + trainFrequency + "</td>" +
-            "<td>" + nextArrival + "</td>" +
-            "<td>" + minutesAway + "</td></tr>"
-        )
-    });
-
-    $("#addTrain").on("click", function () {
-
-
-        trainName = $("#nameInput").val().trim();
-        trainDestination = $("#destinationInput").val().trim();
-        timeInput = $("#timeInput").val().trim();
-        trainFrequency = $("#frequencyInput").val().trim();
-        console.log("trainName: " + trainName, "trainDest: " + trainDestination, "timeInput: " + timeInput, "trainFreq: " + trainFrequency)
-        console.log("CURRENT DATE: " + moment().format("MMMM do YYYY, hh:mm:ss A"))
-
-        // if (trainName == "") {
-        //     alert('Enter a train name.');
-        //     return false;
-        // }
-        // if (trainDestination == "") {
-        //     alert('Enter a destination.');
-        //     return false;
-        // }
-        // if (timeInput == "") {
-        //     alert('Enter a first train time.');
-        //     return false;
-        // }
-        // if (trainFrequency == "") {
-        //     alert('Enter a frequency');
-        //     return false;
-        // }
+       
+        // var minutesAway = snapshot.val().minutesAway;
+        // var nextArrival = snapshot.val().nextArrival;
+        console.log(snapshot.val())
 
         var timeConverted = moment(timeInput, "hh:mm").subtract("1,years");
         console.log("Time converted: " + timeConverted)
@@ -81,27 +53,45 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
         var trainRemainder = diffTime % trainFrequency;
         console.log("trainRemainder: " + trainRemainder)
 
-        var minutesLeft = trainFrequency - trainRemainder;
-        console.log("Minutes away: " + minutesLeft)
+        var minutesAway = trainFrequency - trainRemainder;
+        console.log("Minutes away: " + minutesAway)
 
-        var nextTrain = moment().add(minutesLeft, "minutes").format("hh:mm a");
-        console.log("nextTrain: " + nextTrain)
+        var nextArrival = moment().add(minutesAway, "minutes").format("hh:mm a");
+        console.log("nextTrain: " + nextArrival)
 
+        $("#trainInfo").append(
+            "<tr><td>" + trainName + "</td>" +
+            "<td>" + trainDestination + "</td>" +
+            "<td>" + trainFrequency + "</td>" +
+            "<td>" + nextArrival + "</td>" +
+            "<td>" + minutesAway + "</td></tr>"
+        )
+    });
+
+
+
+    $("#addTrain").on("click", function () {
+
+
+        trainName = $("#nameInput").val().trim();
+        trainDestination = $("#destinationInput").val().trim();
+        timeInput = $("#timeInput").val().trim();
+        trainFrequency = $("#frequencyInput").val().trim();
+        console.log("trainName: " + trainName, "trainDest: " + trainDestination, "timeInput: " + timeInput, "trainFreq: " + trainFrequency)
+        console.log("CURRENT DATE: " + moment().format("MMMM do YYYY, hh:mm:ss A"))
 
         var newTrain = {
             trainName: trainName,
             trainDestination: trainDestination,
             timeInput: timeInput,
             trainFrequency: trainFrequency,
-            minutesAway: minutesLeft,
-            nextArrival: nextTrain
         }
 
-        console.log("New Train: " + newTrain)
+        console.log(newTrain)
         database.ref().push(newTrain);
     })
 
     
-
+    
 
 });

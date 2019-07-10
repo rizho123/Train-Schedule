@@ -3,6 +3,16 @@ body {
     background-attachment: fixed;
 }
 
+.currentTime {
+    background-color: #0051778e;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    color: #ffffff;
+    border: 1px solid #5252527e;
+}
+
 .container {
     margin-bottom: 10%;
     margin-top: 2%;
@@ -45,6 +55,10 @@ button:focus, input:focus {
     border: 1px solid #36363648;
     padding: 15px;
     border-radius: 10px 30px;
+}
+
+.schedule {
+    margin-top: 1%;
 }
 
 .schedule, .form-container {
