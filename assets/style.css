@@ -4,6 +4,14 @@ body {
 
 .container {
     margin-bottom: 10%;
+    margin-top: 2%;
+}
+
+.title {
+    text-shadow: 1px 1px 8px #005177b9;
+    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-width: 1px;
+    color: #ffffff;
 }
 
 input {
