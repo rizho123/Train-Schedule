@@ -1,5 +1,6 @@
 body {
-    background: url("./images/gravel.png")
+    background: url("./images/gravel.png");
+    background-attachment: fixed;
 }
 
 .container {
@@ -41,6 +42,7 @@ button:focus, input:focus {
 
 .scheduletitle {
     background-color: #0051778e;
+    border: 1px solid #36363648;
     padding: 15px;
     border-radius: 10px 30px;
 }
@@ -94,7 +96,7 @@ button:focus, input:focus {
 }
 
 tr, td {
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 tr:hover {
