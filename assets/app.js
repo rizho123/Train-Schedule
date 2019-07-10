@@ -101,5 +101,7 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
         database.ref().push(newTrain);
     })
 
+    
+
 
 });
