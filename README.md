@@ -8,10 +8,10 @@
 ##### Next Arrival and Minutes Away will be calculated and displayed based on the time entries entered in the form.
 
 
-<img width = 900 src = "">
+<img width = 900 src = "https://github.com/rizho123/Train-Schedule/blob/master/assets/images/preview1.PNG?raw=true">
 
 ## Form
 
 ###### You can add a new train by filling the out the form. Your train will be displayed with arrival info based on the time you submitted the form.
 
-<img width = 900 src = "">
+<img width = 900 src = "https://github.com/rizho123/Train-Schedule/blob/master/assets/images/preview2.PNG?raw=true">
