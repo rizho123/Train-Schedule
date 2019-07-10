@@ -2,6 +2,10 @@ body {
     background: url("./images/gravel.png")
 }
 
+.container {
+    margin-bottom: 10%;
+}
+
 input {
     border: none;
     transition: 0.5s;
@@ -27,6 +31,12 @@ button:focus, input:focus {
     font-weight: bold;
 }
 
+.scheduletitle {
+    background-color: #0051778e;
+    padding: 15px;
+    border-radius: 10px 30px;
+}
+
 .schedule, .form-container {
     background-color: #ffffff;
     padding: 20px;
@@ -35,28 +45,44 @@ button:focus, input:focus {
     box-shadow: 1px 1px 10px #000000a4;
 }
 
+.form-container {
+    height: 400px;
+}
+
 .validate {
     border-radius: 6px;
     border: 1px solid #0000006c;
     padding-left: 8px;
 }
 
-.form-container {
+#train-form {
+    width: 50%;
+    margin: 0;
+    position: absolute;
+}
+
+.imagehere {
+    height: 254px;
     background: url("./images/thomas.jpg");
     background-repeat: no-repeat;
     background-position: right;
+    background-size: 100%;
+    float: right;
+    position: relative;
+    width: 50%;
+    box-shadow: 0 0 8px 8px #ffffff inset;
 }
 
 #addTrain {
     width: 80px;
     height: 30px;
     border-radius: 5px;
-    background-color: #0084ff;
+    background-color: #005bb1a4;
     color: #ffffff;
 }
 
 #addTrain:active {
-    background-color: #0044ff;
+    background-color: #0044ffc4;
 }
 
 tr, td {
@@ -69,4 +95,6 @@ tr:hover {
 
 td:hover {
     background-color: #00aeff6e;
+    color: #ffffff;
+    cursor: default;
 }
