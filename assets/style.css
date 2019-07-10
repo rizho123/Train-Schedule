@@ -4,6 +4,15 @@ body {
 
 input {
     border: none;
+    transition: 0.5s;
+}
+
+input:hover {
+    box-shadow: 0 0 10px #00aeffa2;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #0044ffa2;
 }
 
 button:focus, input:focus {
@@ -14,15 +23,50 @@ button:focus, input:focus {
     text-align: center;
 }
 
+.scheduletitle, #tabletitle {
+    font-weight: bold;
+}
+
 .schedule, .form-container {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px 40px;
     border: 1px solid #0000006c;
+    box-shadow: 1px 1px 10px #000000a4;
 }
 
 .validate {
-    border-radius: 10px;
+    border-radius: 6px;
     border: 1px solid #0000006c;
     padding-left: 8px;
+}
+
+.form-container {
+    background: url("./images/thomas.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#addTrain {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #0084ff;
+    color: #ffffff;
+}
+
+#addTrain:active {
+    background-color: #0044ff;
+}
+
+tr, td {
+    transition: 0.5s;
+}
+
+tr:hover {
+    background-color: #0000006c
+}
+
+td:hover {
+    background-color: #00aeff6e;
 }

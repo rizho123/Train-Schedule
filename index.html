@@ -19,7 +19,7 @@
         <div class="container">
             <div class="header">
                 <h1 class="title">Train Schedule</h1>
-                <p>Text Description</p>
+                <p>A simple app to calculate train arrival times!</p>
             </div>
             <div class="schedule" id="schedule">
                 <p class="scheduletitle">Current Train Schedule</p>
@@ -27,12 +27,11 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <!-- The scope attribute specifies that this is a header for a column -->
-                    <th scope="col">Train Name</th>
-                    <th scope="col">Destination</th>
-                    <th scope="col">Frequency (min)</th>
-                    <th scope="col">Next Arrival</th>
-                    <th scope="col">Minutes Away</th>
+                    <th scope="col" id="tabletitle">Train Name</th>
+                    <th scope="col" id="tabletitle">Destination</th>
+                    <th scope="col" id="tabletitle">Frequency (min)</th>
+                    <th scope="col" id="tabletitle">Next Arrival</th>
+                    <th scope="col" id="tabletitle">Minutes Away</th>
                     </tr>
                 </thead>
                 <tbody id="trainInfo">
@@ -54,12 +53,12 @@
 
                 </div>
                 <div class="input-1">
-                    <label class="timeslot" for="">First Train Time (HH:MM-militarytime)</label>
-                    <input type="time" class="validate" id="timeInput">
+                    <label class="timeslot" for="">First Train Time:</label>
+                    <input type="text" class="validate" id="timeInput" placeholder="00:00 AM/PM">
 
                 </div>
                 <div class="input-1">
-                    <label for="">Frequency (minutes)</label>
+                    <label for="">Frequency (minutes):</label>
                     <input type="number" class="validate" id="frequencyInput">
 
                 </div>

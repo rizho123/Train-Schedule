@@ -70,7 +70,7 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
         // }
 
         var timeConverted = moment(timeInput, "hh:mm").subtract("1,years");
-        console.log(timeConverted)
+        console.log("Time converted: " + timeConverted)
         var currentTime = moment();
         console.log("Military time(now):  " + currentTime.format("hh:mm"));
 
@@ -97,15 +97,8 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
             nextArrival: nextTrain
         }
 
-        console.log(newTrain)
+        console.log("New Train: " + newTrain)
         database.ref().push(newTrain);
-
-        // $("#nameInput").val("");
-        // $("#destinationInput").val("");
-        // $("#timeInput").val("");
-        // $("#frequencyInput").val("");
-
-        
     })
 
 
