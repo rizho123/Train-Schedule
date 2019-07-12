@@ -56,7 +56,7 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
         var minutesAway = trainFrequency - trainRemainder;
         console.log("Minutes away: " + minutesAway)
 
-        var nextArrival = moment().add(minutesAway, "minutes").format("hh:mm a");
+        var nextArrival = moment().add(minutesAway, "minutes").format("dddd, MMM Do, hh:mm a");
         console.log("nextTrain: " + nextArrival)
 
         $("#trainInfo").append(
