@@ -25,7 +25,10 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
       var database = firebase.database();
 
       function timeClock () {
-        $(".currentTime").html(moment().format("H:mm:ss a"));
+        var time = "2019-07-17T09:30:29Z"
+        
+        $(".currentTime").html(moment(time).startOf("hour").fromNow());
+        $(".scurrentTime").html(moment().format("H:mm:ss a"));
     }
 
     setInterval(timeClock, 1000);
@@ -71,6 +74,12 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
 
 
     $("#addTrain").on("click", function () {
+
+        if(trainName == "" || trainDestination == "" || timeInput == "" || trainFrequency == "") {
+            console.log("blank fields")
+            alert("All fields must be entered! Please try again.")
+            return;
+        }
 
 
         trainName = $("#nameInput").val().trim();
