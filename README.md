@@ -1,5 +1,5 @@
 # Train-Schedule
-##### A simple app that calculates the arrival time for the train(s) submitted. Add a new train by filling out the form completely below the schedule.
+##### A simple app that calculates the arrival time for the train(s) submitted. Add a new train by filling out the form completely below the schedule. [Live Deploy](https://rizho123.github.io/Train-Schedule/ "Trains")
 
 
 ## Main Page
