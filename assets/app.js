@@ -25,10 +25,7 @@ console.log("BEGIN-CURRENT DATE: " + moment().format("MMMM do YYYY, h:mm:ss A"))
       var database = firebase.database();
 
       function timeClock () {
-        var time = "2019-07-17T09:30:29Z"
-        
-        $(".currentTime").html(moment(time).startOf("hour").fromNow());
-        $(".scurrentTime").html(moment().format("H:mm:ss a"));
+        $(".currentTime").html(moment().format("H:mm:ss a"));
     }
 
     setInterval(timeClock, 1000);
